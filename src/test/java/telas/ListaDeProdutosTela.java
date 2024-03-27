@@ -5,12 +5,10 @@ import org.openqa.selenium.WebDriver;
 
 import java.time.Duration;
 
-public class ListaDeProdutosTela {
-
-    private WebDriver app;
+public class ListaDeProdutosTela  extends BaseTela{
 
     public ListaDeProdutosTela(WebDriver app) {
-        this.app = app;
+        super(app);
     }
 
     public FormularioAdicaoProdutoTela abrirTelaAdicaoProduto() {

@@ -3,11 +3,9 @@ package telas;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class FormularioAdicaoProdutoTela {
-    private WebDriver app;
-
+public class FormularioAdicaoProdutoTela  extends  BaseTela{
     public FormularioAdicaoProdutoTela(WebDriver app) {
-        this.app = app;
+        super(app);
     }
 
     public FormularioAdicaoProdutoTela preencherNomeProduto(String nome) {
@@ -39,6 +37,6 @@ public class FormularioAdicaoProdutoTela {
     }
 
     public String obterMesnsagemErro() {
-        return app.findElement(By.xpath("//android.widget.Toast")).getText();
+        return capturarToast();
     }
 }
